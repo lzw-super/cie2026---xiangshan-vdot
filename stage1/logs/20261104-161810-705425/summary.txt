@@ -1,0 +1,6 @@
+emu compiled at Nov  4 2026, 16:05:46
+hello xiangshan, I am lzw-super, IP SZU.
+[PERF ][time=     Core 0: HIT GOOD TRAP at pc = 0x8000014c
+Core-0 instrCnt = 1,053, cycleCnt = 9,815, IPC = 0.107285
+Seed=0 Guest cycle spent: 9,819 (this will be different from cycleCnt if emu loads a snapshot)
+Host time spent: 62,521ms

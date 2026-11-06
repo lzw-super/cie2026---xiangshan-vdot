@@ -1,0 +1,5 @@
+7d1975f146b0ce24aaf4cdd455a4a4faae2826a46641eaeb5b1d88c2257068d4  src/isa/riscv64/include/isa-all-instr.h
+bcbe7049239ca1a61d3e23e54d4cf02f88dec3799c7d90844d2ddcb240e2eb61  src/isa/riscv64/instr/rvv/decode.h
+a34e5fb6e5996939ad15e335f90270a52e866c2ab754f94976051203546c0893  src/isa/riscv64/instr/rvv/vcompute.h
+e2d5b042ceeecf79c5a53e23cb8797de55a51bebc757fedf626e72ad19a1e749  configs/riscv64-xs-kmhv2-vdot-ref_defconfig
+c7ca56ba46db7515340c010e382446461207a465ab327b69a50f44a010f12ac4  src/isa/riscv64/system/intr.c

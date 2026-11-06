@@ -1,0 +1,7 @@
+hello/build/
+vector-add/build/
+vector-add/runs/**/*.vcd
+vector-add/runs/**/*.fst
+vector-add/runs/**/*.elf
+vector-add/runs/**/*.bin
+vector-add/runs/**/signals.tsv

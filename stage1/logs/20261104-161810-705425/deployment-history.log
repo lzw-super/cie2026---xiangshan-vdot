@@ -1,0 +1,25 @@
+Relevant historical commands; individual execution times are not stored.
+Current successful emu build is evidenced separately by config-evidence/emu-build-time.log.
+history_line_52: git clone https://github.com/OpenXiangShan/xs-env.git
+history_line_54: sudo -s ./setup-tools.sh
+history_line_55: source setup.sh
+history_line_56: source env.sh
+history_line_60: make init
+history_line_149: make emu CONFIG=KunminghuV2Config EMU_TRACE=1 -j32
+history_line_150: make init
+history_line_151: make emu CONFIG=KunminghuV2Config EMU_TRACE=1 -j32
+history_line_154: source setup.sh
+history_line_155: source env.sh
+history_line_157: make init
+history_line_158: make emu CONFIG=KunminghuV2Config EMU_TRACE=1 -j32
+history_line_159: make emu CONFIG=KunminghuV2Config EMU_TRACE=1 -j30
+history_line_161: make emu CONFIG=KunminghuV2Config EMU_TRACE=1 -j30
+history_line_174: make emu CONFIG=KunminghuV2Config EMU_TRACE=1 -j30
+history_line_178: make emu CONFIG=KunminghuV2Config EMU_TRACE=1 -j30
+history_line_217: make init
+history_line_218: make emu CONFIG=KunminghuV2Config EMU_TRACE=1 -j30
+history_line_220: make init
+history_line_221: make emu CONFIG=KunminghuV2Config EMU_TRACE=1 -j30
+history_line_230: make emu CONFIG=KunminghuV2Config EMU_TRACE=1 -j30
+history_line_233: make emu CONFIG=KunminghuV2Config EMU_TRACE=1 -j30
+history_line_235: make emu CONFIG=KunminghuV2Config EMU_TRACE=1 -j30

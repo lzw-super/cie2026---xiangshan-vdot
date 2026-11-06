@@ -1,0 +1,107 @@
+SET XS_PROJECT_ROOT: /home/lzw-sub/risc-v-compitition-26/xs-env
+SET NOOP_HOME (XiangShan RTL Home): /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan
+SET NEMU_HOME: /home/lzw-sub/risc-v-compitition-26/xs-env/NEMU
+SET AM_HOME: /home/lzw-sub/risc-v-compitition-26/xs-env/nexus-am
+SET DRAMSIM3_HOME: /home/lzw-sub/risc-v-compitition-26/xs-env/DRAMsim3
+SET XS_PROJECT_ROOT: /home/lzw-sub/risc-v-compitition-26/xs-env
+SET NOOP_HOME (XiangShan RTL Home): /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan
+SET NEMU_HOME: /home/lzw-sub/risc-v-compitition-26/xs-env/NEMU
+SET AM_HOME: /home/lzw-sub/risc-v-compitition-26/xs-env/nexus-am
+SET DRAMSIM3_HOME: /home/lzw-sub/risc-v-compitition-26/xs-env/DRAMsim3
+audit_time=2026-11-04T16:18:10+08:00
+PRETTY_NAME="Ubuntu 22.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.5 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=jammy
+Linux 6.8.0-138-generic x86_64 GNU/Linux
+cpu_threads=40
+
+Tool paths and versions
+/usr/bin/git
+/usr/bin/make
+/usr/bin/g++
+/usr/bin/cmake
+/home/lzw-sub/miniconda3/bin/python3
+/usr/bin/java
+/usr/local/bin/mill
+/usr/local/bin/verilator
+/usr/bin/riscv64-linux-gnu-gcc
+git version 2.34.1
+GNU Make 4.3
+g++ (Ubuntu 10.5.0-1ubuntu1~22.04.3) 10.5.0
+cmake version 3.22.1
+Python 3.14.8
+openjdk version "17.0.20.1" 2026-08-18
+OpenJDK Runtime Environment (build 17.0.20.1+1-1-22.04-Ubuntu)
+OpenJDK 64-Bit Server VM (build 17.0.20.1+1-1-22.04-Ubuntu, mixed mode, sharing)
+JAVA_HOME=<unset>
+Mill Build Tool version 0.12.3
+Java version: 17.0.20.1, vendor: Ubuntu, runtime: /usr/lib/jvm/java-17-openjdk-amd64
+Default locale: en_US, platform encoding: UTF-8
+OS name: "Linux", version: 6.8.0-138-generic, arch: amd64
+Verilator 5.052 2026-09-05 rev v5.052
+riscv64-linux-gnu-gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+
+Installed dependency packages
+cmake=3.22.1-1ubuntu1.22.04.2
+device-tree-compiler=1.6.1-1
+g++=4:11.2.0-1ubuntu1
+g++-riscv64-linux-gnu=4:11.2.0--1ubuntu1
+git=1:2.34.1-1ubuntu1.18
+libreadline-dev:amd64=8.1.2-1
+libsdl2-dev:amd64=2.0.20+dfsg-2ubuntu1.22.04.1
+libsqlite3-dev:amd64=3.37.2-2ubuntu0.8
+libzstd-dev:amd64=1.4.8+dfsg-3build1
+make=4.3-4.1build1
+zlib1g-dev:amd64=1:1.2.11.dfsg-2ubuntu9.2
+
+Repositories
+
+repository=/home/lzw-sub/risc-v-compitition-26/xs-env
+8d9c5c2f6037da069818fd99ddee84d96dcea754
+ M NEMU
+ M XiangShan
+
+repository=/home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan
+c689c67457ea9e29795551aa03e60294889a1165
+
+repository=/home/lzw-sub/risc-v-compitition-26/xs-env/NEMU
+3867d003fa19e5e7077be5ebe196f4ad154cdef0
+
+repository=/home/lzw-sub/risc-v-compitition-26/xs-env/nexus-am
+9ea03e6565ed90ef958ad127c0357b0a295da75e
+
+repository=/home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest
+62e4540c03c03aa947bdb67f4b6bf66f1a29c5d0
+
+repository=/home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/yunsuan
+cadd3c2f43096e253d61296b33ac697be8354e29
+
+Existing emu
+path=/home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build/emu bytes=258116872 modified=2026-11-04 16:16:27.240817801 +0800
+d3a3c56ffcd5707fe435994ac4e31669cca545961e5ab17f56f215065f69f790  /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build/emu
+
+Build provenance
+	Command being timed: "mill -i -Djvm-xmx=40G -Djvm-xss=256m xiangshan.test.runMain top.SimTop --target-dir build/rtl --config KunminghuV2Config --issue E.b --firtool-opt --repl-seq-mem --repl-seq-mem-file=SimTop.sv.conf --num-cores 1 --dump-fir --target systemverilog --split-verilog --firtool-opt -O=release --disable-annotation-unknown --lowering-options=explicitBitcast,disallowLocalVariables,disallowPortDeclSharing,locationInfoStyle=none --enable-difftest --full-stacktrace"
+[mill] Generating Verilog files...
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 16:25.80
+	Exit status: 0
+[verilator] Generating C++ files...
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:31.78
+	Exit status: 0
+[c++] Compiling C++ files...
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:41.96
+	Exit status: 0
+VM_TRACE = 1
+VM_TRACE_FST = 0
+VM_TRACE_VCD = 1
+d3a3c56ffcd5707fe435994ac4e31669cca545961e5ab17f56f215065f69f790  /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build/emu
+bfd6321e26cfa93304bec74240a422e8823949623d7df92db23ad92ab18add5e  /home/lzw-sub/risc-v-compitition-26/cie2026-跳水-xiangshan-vdot/stage1/hello/hello.c

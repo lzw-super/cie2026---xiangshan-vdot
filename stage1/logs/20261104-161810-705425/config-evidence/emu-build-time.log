@@ -1,0 +1,78 @@
+
+[mill] Generating Verilog files...
+Wed, 04 Nov 2026 15:38:41 +0800
+	Command being timed: "mill -i -Djvm-xmx=40G -Djvm-xss=256m xiangshan.test.runMain top.SimTop --target-dir build/rtl --config KunminghuV2Config --issue E.b --firtool-opt --repl-seq-mem --repl-seq-mem-file=SimTop.sv.conf --num-cores 1 --dump-fir --target systemverilog --split-verilog --firtool-opt -O=release --disable-annotation-unknown --lowering-options=explicitBitcast,disallowLocalVariables,disallowPortDeclSharing,locationInfoStyle=none --enable-difftest --full-stacktrace"
+	User time (seconds): 3276.43
+	System time (seconds): 216.36
+	Percent of CPU this job got: 354%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 16:25.80
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 22928896
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 35611418
+	Voluntary context switches: 7781266
+	Involuntary context switches: 723376
+	Swaps: 0
+	File system inputs: 2600
+	File system outputs: 3725600
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+[verilator] Generating C++ files...
+Wed, 04 Nov 2026 15:55:13 +0800
+	Command being timed: "verilator --exe -O3 --cc --top-module SimTop +define+VERILATOR=1 +define+PRINTF_COND=1 +define+RANDOMIZE_REG_INIT +define+RANDOMIZE_MEM_INIT +define+RANDOMIZE_GARBAGE_ASSIGN +define+RANDOMIZE_DELAY=0 -Wno-STMTDLY -Wno-WIDTH --max-num-width 150000 --assert --x-assign unique --output-split 30000 --output-split-cfuncs 30000 -I/home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build/rtl -I/home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build/generated-src -CFLAGS -I/home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common -I/home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/config -DNOOP_HOME=\"/home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan\" -I/home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build/generated-src -I/home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/plugin/include -I/home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/difftest -I/home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build -DENABLE_CHISEL_DB -I/home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build -DENABLE_CONSTANTIN -DREF_PROXY=NemuProxy -DREF_HOME=\"/home/lzw-sub/risc-v-compitition-26/xs-env/NEMU\" -I/home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/plugin/spikedasm -I/home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/verilator -DVERILATOR -DNUM_CORES=1 --std=c++17 -DVERILATOR_4_210 -LDFLAGS -lsqlite3 -lz -lzstd -ldl -CFLAGS $(PGO_CFLAGS) -LDFLAGS $(PGO_LDFLAGS) -o /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build/emu +define+DIFFTEST --instr-count-dpi 1 --no-timing +define+VERILATOR_5 --quiet-stats --trace -Mdir /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build/emu-compile /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build/rtl/SimTop.sv /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/vsrc/common/SimJTAG.v /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/vsrc/common/assert.v /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/vsrc/common/ref.v /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/perf.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/elfloader.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/device.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/uart.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/keyboard.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/coverage.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/ram.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/golden.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/lightsss.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/vga.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/compress.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/remote_bitbang.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/sdcard.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/query.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/mpool.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/dut.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/common.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/SimJTAG.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/main.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/common/flash.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build/generated-src/difftest-dpic.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/difftest/difftrace.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/difftest/difftest.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/difftest/goldenmem.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/difftest/refproxy.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build/chisel_db.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build/constantin.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/plugin/spikedasm/spikedasm.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/verilator/emu.cpp /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/difftest/src/test/csrc/verilator/snapshot.cpp"
+	User time (seconds): 602.18
+	System time (seconds): 29.50
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:31.78
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13512800
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 8167632
+	Voluntary context switches: 23
+	Involuntary context switches: 2097
+	Swaps: 0
+	File system inputs: 272
+	File system outputs: 4670032
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+[c++] Compiling C++ files...
+Wed, 04 Nov 2026 16:05:44 +0800
+	Command being timed: "make -s VM_PARALLEL_BUILDS=1 OPT_SLOW=-O0 OPT_FAST=-O3 PGO_CFLAGS= PGO_LDFLAGS= -C /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build/emu-compile -f /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build/emu-compile/VSimTop.mk"
+	User time (seconds): 16412.08
+	System time (seconds): 593.42
+	Percent of CPU this job got: 2648%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:41.96
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1183444
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 40
+	Minor (reclaiming a frame) page faults: 136976674
+	Voluntary context switches: 6738
+	Involuntary context switches: 195237
+	Swaps: 0
+	File system inputs: 1832
+	File system outputs: 5454432
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

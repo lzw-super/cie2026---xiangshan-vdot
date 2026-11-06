@@ -1,0 +1,9 @@
+2026-11-04T16:25:44+08:00
+emu compiled at Nov  4 2026, 16:05:46
+Usage: /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build/emu [OPTION...]
+
+  -s, --seed=NUM             use this seed
+  -C, --max-cycles=NUM       execute at most NUM cycles
+riscv64-linux-gnu-gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+c689c67457ea9e29795551aa03e60294889a1165
+d3a3c56ffcd5707fe435994ac4e31669cca545961e5ab17f56f215065f69f790  /home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build/emu

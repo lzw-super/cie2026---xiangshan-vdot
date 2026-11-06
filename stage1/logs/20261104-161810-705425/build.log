@@ -1,0 +1,21 @@
+make: Entering directory '/home/lzw-sub/risc-v-compitition-26/cie2026-跳水-xiangshan-vdot/stage1/hello'
+# Building stage1-hello [riscv64-xs] with AM_HOME {/home/lzw-sub/risc-v-compitition-26/xs-env/nexus-am}
+rm -rf /home/lzw-sub/risc-v-compitition-26/cie2026-跳水-xiangshan-vdot/stage1/hello/build/
+make: Leaving directory '/home/lzw-sub/risc-v-compitition-26/cie2026-跳水-xiangshan-vdot/stage1/hello'
+make: Entering directory '/home/lzw-sub/risc-v-compitition-26/cie2026-跳水-xiangshan-vdot/stage1/hello'
+# Building stage1-hello [riscv64-xs] with AM_HOME {/home/lzw-sub/risc-v-compitition-26/xs-env/nexus-am}
++ CC hello.c
+make[1]: Entering directory '/home/lzw-sub/risc-v-compitition-26/xs-env/nexus-am'
+make[2]: Entering directory '/home/lzw-sub/risc-v-compitition-26/xs-env/nexus-am/am'
+# Building lib-am [riscv64-xs]
++ AS src/nemu/common/mainargs.S
++ AR -> build/am-riscv64-xs.a
+make[2]: Leaving directory '/home/lzw-sub/risc-v-compitition-26/xs-env/nexus-am/am'
+make[1]: Leaving directory '/home/lzw-sub/risc-v-compitition-26/xs-env/nexus-am'
+make[1]: Entering directory '/home/lzw-sub/risc-v-compitition-26/xs-env/nexus-am/libs/klib'
+# Building lib-klib [riscv64-xs]
+make[1]: Leaving directory '/home/lzw-sub/risc-v-compitition-26/xs-env/nexus-am/libs/klib'
+# Creating binary image [riscv64-xs]
++ LD -> build/stage1-hello-riscv64-xs.elf
++ OBJCOPY -> build/stage1-hello-riscv64-xs.bin
+make: Leaving directory '/home/lzw-sub/risc-v-compitition-26/cie2026-跳水-xiangshan-vdot/stage1/hello'

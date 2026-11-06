@@ -1,0 +1,2 @@
+emu_exit_code=0
+self_check=PASS

@@ -1,0 +1,4 @@
+Core 0: HIT GOOD TRAP at pc = 0x800000b8
+Core-0 instrCnt = 62, cycleCnt = 4,416, IPC = 0.014040
+Seed=0 Guest cycle spent: 4,420 (this will be different from cycleCnt if emu loads a snapshot)
+Host time spent: 55,506ms

@@ -1,0 +1,1 @@
+/home/lzw-sub/risc-v-compitition-26/xs-env/XiangShan/build/emu -i /home/lzw-sub/risc-v-compitition-26/cie2026-跳水-xiangshan-vdot/stage1/logs/20261104-161810-705425/stage1-hello-riscv64-xs.bin -C 100000 --ram-size 128MB --no-diff 

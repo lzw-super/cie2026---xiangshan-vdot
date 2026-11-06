@@ -1,0 +1,7 @@
+make: Entering directory '/home/lzw-sub/risc-v-compitition-26/cie2026-跳水-xiangshan-vdot/stage1/vector-add'
+mkdir -p build
+riscv64-linux-gnu-gcc -march=rv64gcv -mabi=lp64d -nostdlib -nostartfiles -static -Wl,--build-id=none,--no-relax -T link.ld 00_vl4_ta.S -o build/00_vl4_ta.elf
+riscv64-linux-gnu-objcopy -O binary build/00_vl4_ta.elf build/00_vl4_ta.bin
+riscv64-linux-gnu-objdump -d -M no-aliases,numeric build/00_vl4_ta.elf > build/00_vl4_ta.dis
+riscv64-linux-gnu-nm -n build/00_vl4_ta.elf > build/00_vl4_ta.symbols
+make: Leaving directory '/home/lzw-sub/risc-v-compitition-26/cie2026-跳水-xiangshan-vdot/stage1/vector-add'

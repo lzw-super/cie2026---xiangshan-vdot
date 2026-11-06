@@ -1,0 +1,8 @@
+src/main/scala/xiangshan/Parameters.scala
+src/main/scala/xiangshan/backend/decode/DecodeUnit.scala
+src/main/scala/xiangshan/backend/decode/Instructions.scala
+src/main/scala/xiangshan/backend/decode/VecDecoder.scala
+src/main/scala/xiangshan/backend/fu/FuType.scala
+src/main/scala/xiangshan/backend/fu/FuConfig.scala
+src/main/scala/xiangshan/backend/fu/vector/VDotDataModule.scala
+src/main/scala/xiangshan/backend/fu/wrapper/VDot.scala

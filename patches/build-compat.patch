@@ -1,0 +1,33 @@
+--- a/.gitmodules
++++ b/.gitmodules
+@@ -28,3 +28,6 @@
+ [submodule "src/main/resources/aia"]
+ 	path = src/main/resources/aia
+ 	url = https://github.com/OpenXiangShan/OpenAIA.git
++[submodule "chisel-template"]
++	path = chisel-template
++	url = https://github.com/chipsalliance/chisel-template.git
+--- a/Makefile
++++ b/Makefile
+@@ -208,8 +208,8 @@
+ 	$(MEM_GEN_SEP) "$(MEM_GEN)" "$@.conf" "$(@D)"
+ 	@git log -n 1 >> .__head__
+ 	@git diff >> .__diff__
+-	@sed -i 's/^/\/\// ' .__head__
+-	@sed -i 's/^/\/\//' .__diff__
++	@sed -i 's/^/\/\/ git-meta: / ' .__head__
++	@sed -i 's/^/\/\/ git-meta: /' .__diff__
+ 	@cat .__head__ .__diff__ $@ > .__out__
+ 	@mv .__out__ $@
+ 	@rm .__head__ .__diff__
+@@ -228,8 +228,8 @@
+ 	$(MEM_GEN_SEP) "$(MEM_GEN)" "$@.conf" "$(@D)"
+ 	@git log -n 1 >> .__head__
+ 	@git diff >> .__diff__
+-	@sed -i 's/^/\/\// ' .__head__
+-	@sed -i 's/^/\/\//' .__diff__
++	@sed -i 's/^/\/\/ git-meta: / ' .__head__
++	@sed -i 's/^/\/\/ git-meta: /' .__diff__
+ 	@cat .__head__ .__diff__ $@ > .__out__
+ 	@mv .__out__ $@
+ 	@rm .__head__ .__diff__

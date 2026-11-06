@@ -1,0 +1,23 @@
+# Local build and editor files
+**/build/
+**/__pycache__/
+/.metals/
+/.vscode/
+*.vcd
+*.fst
+
+# Local development material and reproduction results
+/archive/
+/docs/
+/results/
+/stage2/reproduction/
+/stage2/evidence/
+/stage2/2.3_tests/runs/
+/stage2/2.3_tests/suites/*/artifacts/
+/stage2/2.3_tests/suites/*/evidence/
+/stage3/reproduction/
+/stage3/verification/
+/stage3/3.1.2_协同仿真/evidence/
+
+# Lecture videos are delivered separately; keep local copies
+/videos/*.mp4

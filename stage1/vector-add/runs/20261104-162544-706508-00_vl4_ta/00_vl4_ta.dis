@@ -1,0 +1,67 @@
+
+build/00_vl4_ta.elf:     file format elf64-littleriscv
+
+
+Disassembly of section .text:
+
+0000000080000000 <_start>:
+    80000000:	00000297          	auipc	x5,0x0
+    80000004:	0d82b283          	ld	x5,216(x5) # 800000d8 <_GLOBAL_OFFSET_TABLE_+0x8>
+    80000008:	30529073          	csrrw	x0,mtvec,x5
+    8000000c:	60000293          	addi	x5,x0,1536
+    80000010:	3002a073          	csrrs	x0,mstatus,x5
+    80000014:	00801073          	csrrw	x0,vstart,x0
+    80000018:	00f01073          	csrrw	x0,vcsr,x0
+    8000001c:	c22022f3          	csrrs	x5,vlenb,x0
+    80000020:	01000313          	addi	x6,x0,16
+    80000024:	06629e63          	bne	x5,x6,800000a0 <wrong_config>
+    80000028:	cc0272d7          	vsetivli	x5,4,e8,m1,ta,ma
+    8000002c:	00400313          	addi	x6,x0,4
+    80000030:	06629863          	bne	x5,x6,800000a0 <wrong_config>
+    80000034:	00000297          	auipc	x5,0x0
+    80000038:	0ac2b283          	ld	x5,172(x5) # 800000e0 <_GLOBAL_OFFSET_TABLE_+0x10>
+    8000003c:	02028087          	vle8.v	v1,(x5)
+    80000040:	00000297          	auipc	x5,0x0
+    80000044:	0a82b283          	ld	x5,168(x5) # 800000e8 <_GLOBAL_OFFSET_TABLE_+0x18>
+    80000048:	02028107          	vle8.v	v2,(x5)
+
+000000008000004c <target_vadd>:
+    8000004c:	021101d7          	vadd.vv	v3,v1,v2
+    80000050:	00000297          	auipc	x5,0x0
+    80000054:	0a02b283          	ld	x5,160(x5) # 800000f0 <_GLOBAL_OFFSET_TABLE_+0x20>
+    80000058:	020281a7          	vse8.v	v3,(x5)
+    8000005c:	0330000f          	fence	rw,rw
+    80000060:	00000297          	auipc	x5,0x0
+    80000064:	0902b283          	ld	x5,144(x5) # 800000f0 <_GLOBAL_OFFSET_TABLE_+0x20>
+    80000068:	00000317          	auipc	x6,0x0
+    8000006c:	09033303          	ld	x6,144(x6) # 800000f8 <_GLOBAL_OFFSET_TABLE_+0x28>
+    80000070:	00400393          	addi	x7,x0,4
+
+0000000080000074 <check>:
+    80000074:	0002ce03          	lbu	x28,0(x5)
+    80000078:	00034e83          	lbu	x29,0(x6)
+    8000007c:	01de1e63          	bne	x28,x29,80000098 <mismatch>
+    80000080:	00128293          	addi	x5,x5,1
+    80000084:	00130313          	addi	x6,x6,1
+    80000088:	fff38393          	addi	x7,x7,-1
+    8000008c:	fe0394e3          	bne	x7,x0,80000074 <check>
+    80000090:	00000513          	addi	x10,x0,0
+    80000094:	0240006f          	jal	x0,800000b8 <finish>
+
+0000000080000098 <mismatch>:
+    80000098:	00100513          	addi	x10,x0,1
+    8000009c:	01c0006f          	jal	x0,800000b8 <finish>
+
+00000000800000a0 <wrong_config>:
+    800000a0:	00200513          	addi	x10,x0,2
+    800000a4:	0140006f          	jal	x0,800000b8 <finish>
+
+00000000800000a8 <exception>:
+    800000a8:	342025f3          	csrrs	x11,mcause,x0
+    800000ac:	34102673          	csrrs	x12,mepc,x0
+    800000b0:	343026f3          	csrrs	x13,mtval,x0
+    800000b4:	00300513          	addi	x10,x0,3
+
+00000000800000b8 <finish>:
+    800000b8:	0005006b          	.word	0x0005006b
+    800000bc:	ffdff06f          	jal	x0,800000b8 <finish>
